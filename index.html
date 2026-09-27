@@ -1,0 +1,1185 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head><!-- GitHub Pages HTML refreshed 2026-09-27. Source: https://sites.google.com/view/yujie-xu ; source footer date: September 18, 2026. -->
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="Academic website of Yujie Xu: research, publications, teaching, and contact information." name="description"/>
+<meta content="light dark" name="color-scheme"/>
+<title>Yujie Xu | Mathematics</title>
+<style>
+    :root {
+      --background: #f5f7fa;
+      --surface: #ffffff;
+      --surface-soft: #eef3f7;
+      --text: #17202a;
+      --muted: #5d6875;
+      --border: #d8e0e8;
+      --accent: #245f8f;
+      --accent-dark: #174365;
+      --accent-soft: #e5f0f8;
+      --news: #fff5d9;
+      --news-border: #e8c875;
+      --shadow: 0 16px 40px rgba(28, 51, 73, 0.08);
+      --max-width: 1120px;
+      --serif: Georgia, "Times New Roman", Times, serif;
+      --sans: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --background: #101419;
+        --surface: #171d24;
+        --surface-soft: #1d2630;
+        --text: #edf2f7;
+        --muted: #aeb8c3;
+        --border: #303b47;
+        --accent: #77b7e5;
+        --accent-dark: #a4d3f3;
+        --accent-soft: #1d3445;
+        --news: #2d2819;
+        --news-border: #786735;
+        --shadow: 0 16px 40px rgba(0, 0, 0, 0.24);
+      }
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 92px;
+    }
+
+    body {
+      margin: 0;
+      background: var(--background);
+      color: var(--text);
+      font-family: var(--sans);
+      font-size: 17px;
+      line-height: 1.68;
+      text-rendering: optimizeLegibility;
+    }
+
+    img {
+      max-width: 100%;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+
+    a:hover {
+      color: var(--accent-dark);
+    }
+
+    a:focus-visible,
+    button:focus-visible,
+    input:focus-visible,
+    summary:focus-visible {
+      outline: 3px solid var(--accent);
+      outline-offset: 3px;
+    }
+
+    .skip-link {
+      position: fixed;
+      left: 18px;
+      top: -80px;
+      z-index: 1000;
+      padding: 10px 14px;
+      border-radius: 6px;
+      background: var(--text);
+      color: var(--background);
+      text-decoration: none;
+      transition: top 0.2s ease;
+    }
+
+    .skip-link:focus {
+      top: 18px;
+    }
+
+    .container {
+      width: min(calc(100% - 40px), var(--max-width));
+      margin-inline: auto;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      border-bottom: 1px solid color-mix(in srgb, var(--border) 82%, transparent);
+      background: color-mix(in srgb, var(--background) 91%, transparent);
+      backdrop-filter: blur(16px);
+    }
+
+    .nav-wrap {
+      display: flex;
+      min-height: 74px;
+      align-items: center;
+      justify-content: space-between;
+      gap: 28px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--text);
+      font-weight: 750;
+      letter-spacing: -0.02em;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .brand-mark {
+      display: grid;
+      width: 36px;
+      height: 36px;
+      place-items: center;
+      border-radius: 50%;
+      background: var(--accent);
+      color: white;
+      font-family: var(--serif);
+      font-size: 0.92rem;
+      font-weight: 700;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 8px 22px;
+    }
+
+    nav a {
+      color: var(--muted);
+      font-size: 0.94rem;
+      font-weight: 650;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      color: var(--text);
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 300px minmax(0, 1fr);
+      gap: clamp(40px, 7vw, 86px);
+      align-items: center;
+      padding-block: clamp(64px, 8vw, 112px) clamp(70px, 9vw, 124px);
+    }
+
+    .portrait-wrap {
+      position: relative;
+      max-width: 300px;
+    }
+
+    .portrait-wrap::before {
+      content: "";
+      position: absolute;
+      inset: 18px -18px -18px 18px;
+      z-index: -1;
+      border: 1px solid var(--border);
+      border-radius: 26px;
+      background: var(--accent-soft);
+    }
+
+    .portrait {
+      display: block;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 4 / 5;
+      border: 1px solid var(--border);
+      border-radius: 26px;
+      box-shadow: var(--shadow);
+      object-fit: cover;
+      object-position: center 38%;
+    }
+
+    .eyebrow {
+      margin: 0 0 10px;
+      color: var(--accent);
+      font-size: 0.82rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    h1,
+    h2,
+    h3 {
+      line-height: 1.2;
+      text-wrap: balance;
+    }
+
+    h1 {
+      margin: 0;
+      font-family: var(--serif);
+      font-size: clamp(3rem, 8vw, 5.7rem);
+      font-weight: 500;
+      letter-spacing: -0.045em;
+    }
+
+    h2 {
+      margin: 0 0 22px;
+      font-family: var(--serif);
+      font-size: clamp(2.1rem, 4.5vw, 3.4rem);
+      font-weight: 500;
+      letter-spacing: -0.025em;
+    }
+
+    h3 {
+      margin: 0;
+      font-size: 1.18rem;
+    }
+
+    .lead {
+      max-width: 780px;
+      margin: 24px 0 0;
+      color: var(--muted);
+      font-family: var(--serif);
+      font-size: clamp(1.18rem, 2.2vw, 1.42rem);
+      line-height: 1.58;
+    }
+
+    .hero-copy > p:not(.eyebrow, .lead) {
+      max-width: 790px;
+    }
+
+    .contact-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 11px;
+      margin-top: 30px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 9px 16px;
+      border: 1px solid var(--accent);
+      border-radius: 8px;
+      background: var(--accent);
+      color: white;
+      font-size: 0.93rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: transform 0.18s ease, background 0.18s ease, color 0.18s ease;
+    }
+
+    .button:hover {
+      transform: translateY(-1px);
+      background: var(--accent-dark);
+      color: white;
+    }
+
+    .button.secondary {
+      background: transparent;
+      color: var(--accent);
+    }
+
+    .button.secondary:hover {
+      background: var(--accent-soft);
+      color: var(--accent-dark);
+    }
+
+    .quick-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 20px;
+      margin-top: 25px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .news {
+      margin-top: 31px;
+      padding: 17px 19px;
+      border: 1px solid var(--news-border);
+      border-radius: 10px;
+      background: var(--news);
+    }
+
+    .news strong {
+      margin-right: 4px;
+    }
+
+    .section {
+      padding-block: clamp(72px, 8vw, 112px);
+      border-top: 1px solid var(--border);
+    }
+
+    .section-intro {
+      max-width: 820px;
+      margin: -7px 0 28px;
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+
+    .legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px 14px;
+      align-items: center;
+      margin: 26px 0 32px;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      min-height: 25px;
+      padding: 2px 9px;
+      border: 1px solid transparent;
+      border-radius: 999px;
+      font-size: 0.76rem;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      line-height: 1;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .tag-nt {
+      border-color: #d8b06d;
+      background: #fff2d7;
+      color: #745012;
+    }
+
+    .tag-rt {
+      border-color: #8fb3d1;
+      background: #e8f3fb;
+      color: #245475;
+    }
+
+    .tag-ag {
+      border-color: #92c5a5;
+      background: #e7f6ec;
+      color: #28613a;
+    }
+
+    .tag-other {
+      border-color: #baa4ce;
+      background: #f3ebfa;
+      color: #5c3e75;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .tag-nt { background: #382d19; color: #f3d28f; border-color: #806c3f; }
+      .tag-rt { background: #1b3142; color: #9bc7e6; border-color: #496f8c; }
+      .tag-ag { background: #1d3526; color: #9fd4af; border-color: #4a7659; }
+      .tag-other { background: #30263a; color: #ceb0e6; border-color: #6d557f; }
+    }
+
+    .filter-panel {
+      display: grid;
+      grid-template-columns: minmax(240px, 1fr) auto;
+      gap: 16px;
+      align-items: center;
+      margin: 0 0 30px;
+      padding: 15px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: var(--surface);
+    }
+
+    .search-label {
+      position: relative;
+    }
+
+    .search-label span {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      clip-path: inset(50%);
+      white-space: nowrap;
+    }
+
+    .search-input {
+      width: 100%;
+      min-height: 44px;
+      padding: 9px 13px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--background);
+      color: var(--text);
+      font: inherit;
+      font-size: 0.95rem;
+    }
+
+    .filter-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 7px;
+    }
+
+    .filter-button {
+      min-height: 38px;
+      padding: 7px 11px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      background: var(--background);
+      color: var(--muted);
+      cursor: pointer;
+      font: inherit;
+      font-size: 0.84rem;
+      font-weight: 700;
+    }
+
+    .filter-button:hover,
+    .filter-button[aria-pressed="true"] {
+      border-color: var(--accent);
+      background: var(--accent-soft);
+      color: var(--accent-dark);
+    }
+
+    .publication-list {
+      display: grid;
+      gap: 16px;
+    }
+
+    .publication {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr);
+      gap: 22px;
+      padding: 26px;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      background: var(--surface);
+      box-shadow: 0 5px 20px rgba(28, 51, 73, 0.035);
+    }
+
+    .publication.is-hidden {
+      display: none;
+    }
+
+    .publication-year {
+      color: var(--accent);
+      font-family: var(--serif);
+      font-size: 1.45rem;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+
+    .publication-title a {
+      color: var(--text);
+      text-decoration-color: color-mix(in srgb, var(--accent) 55%, transparent);
+    }
+
+    .publication-title a:hover {
+      color: var(--accent-dark);
+    }
+
+    .publication-meta {
+      margin: 7px 0 0;
+      color: var(--muted);
+      font-size: 0.93rem;
+    }
+
+    .publication-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      margin-top: 12px;
+    }
+
+    .journal {
+      display: inline-block;
+      margin-top: 12px;
+      color: var(--text);
+      font-family: var(--serif);
+      font-style: italic;
+      font-weight: 600;
+    }
+
+    .abstract {
+      max-width: 880px;
+      margin-top: 15px;
+      color: var(--muted);
+    }
+
+    .abstract p {
+      margin: 0 0 10px;
+    }
+
+    .abstract p:last-child {
+      margin-bottom: 0;
+    }
+
+    .resource-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 15px;
+      margin-top: 14px;
+      font-size: 0.9rem;
+      font-weight: 700;
+    }
+
+    .resource-links a::after {
+      content: " ↗";
+      font-size: 0.8em;
+    }
+
+    .empty-message {
+      display: none;
+      padding: 24px;
+      border: 1px dashed var(--border);
+      border-radius: 12px;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    .empty-message.is-visible {
+      display: block;
+    }
+
+    .compact-list {
+      display: grid;
+      gap: 12px;
+      margin: 26px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .compact-item {
+      padding: 22px 24px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: var(--surface);
+    }
+
+    .compact-item p {
+      margin: 7px 0 0;
+      color: var(--muted);
+    }
+
+    .teaching-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 28px;
+    }
+
+    .teaching-card {
+      padding: 24px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: var(--surface);
+    }
+
+    .teaching-card p {
+      margin: 8px 0 0;
+      color: var(--muted);
+    }
+
+    footer {
+      padding-block: 38px;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .footer-inner {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 12px 30px;
+    }
+
+    .back-to-top {
+      position: fixed;
+      right: 22px;
+      bottom: 22px;
+      z-index: 30;
+      display: grid;
+      width: 46px;
+      height: 46px;
+      place-items: center;
+      border: 1px solid var(--border);
+      border-radius: 50%;
+      background: var(--surface);
+      box-shadow: var(--shadow);
+      color: var(--accent);
+      opacity: 0;
+      pointer-events: none;
+      text-decoration: none;
+      transform: translateY(8px);
+      transition: opacity 0.2s ease, transform 0.2s ease;
+    }
+
+    .back-to-top.visible {
+      opacity: 1;
+      pointer-events: auto;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 820px) {
+      .nav-wrap {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 8px;
+        padding-block: 14px;
+      }
+
+      nav {
+        justify-content: flex-start;
+      }
+
+      .hero {
+        grid-template-columns: 1fr;
+      }
+
+      .portrait-wrap {
+        width: min(260px, 78vw);
+      }
+
+      .filter-panel {
+        grid-template-columns: 1fr;
+      }
+
+      .filter-buttons {
+        justify-content: flex-start;
+      }
+
+      .publication {
+        grid-template-columns: 1fr;
+        gap: 10px;
+      }
+
+      .publication-year {
+        font-size: 1.05rem;
+      }
+
+      .teaching-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 520px) {
+      body {
+        font-size: 16px;
+      }
+
+      .container {
+        width: min(calc(100% - 26px), var(--max-width));
+      }
+
+      nav {
+        gap: 8px 14px;
+      }
+
+      .publication,
+      .compact-item,
+      .teaching-card {
+        padding: 20px;
+      }
+
+      .back-to-top {
+        right: 14px;
+        bottom: 14px;
+      }
+    }
+
+    @media print {
+      .site-header,
+      .filter-panel,
+      .back-to-top,
+      .contact-actions {
+        display: none !important;
+      }
+
+      body {
+        background: white;
+        color: black;
+        font-size: 11pt;
+      }
+
+      .section {
+        padding-block: 30px;
+      }
+
+      .publication,
+      .compact-item,
+      .teaching-card {
+        break-inside: avoid;
+        box-shadow: none;
+      }
+
+      a {
+        color: black;
+      }
+    }
+  
+    /* Additional responsive and accessibility refinements. */
+    [hidden] { display: none !important; }
+    .hero { align-items: start; padding-block: clamp(42px, 6vw, 76px); }
+    .portrait-wrap { margin-top: 12px; }
+    .portrait { aspect-ratio: auto; }
+    h1 { font-size: clamp(2.65rem, 5vw, 4.65rem); }
+    .publication { grid-template-columns: minmax(0, 1fr); }
+
+    .publication-note, .subject-description { color: var(--muted); font-size: 0.9rem; }
+    .subject-description { margin: 8px 0 0; }
+    .publication-title { line-height: 1.4; text-wrap: pretty; }
+    .resource-links a { margin-right: 4px; }
+    p, h1, h2, h3, a { overflow-wrap: anywhere; }
+    .button, .brand-mark { background: var(--accent-dark); }
+    .button.secondary { background: transparent; }
+    .math { font-family: Georgia, 'Times New Roman', serif; }
+    @media (max-width: 820px) {
+      .publication { grid-template-columns: 1fr; }
+
+      .hero { gap: 30px; }
+      html { scroll-padding-top: 135px; }
+    }
+    @media (max-width: 380px) {
+      nav { gap: 8px 11px; }
+      nav a { font-size: 0.86rem; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition: none !important; }
+    }
+    @media (prefers-color-scheme: dark) {
+      .button:not(.secondary), .brand-mark { color: #101419; }
+    }
+    @media print {
+      :root { --background: white; --surface: white; --surface-soft: white; --text: black; --muted: #333; --border: #bbb; --accent: #174365; }
+      [hidden].publication, .publication.is-hidden { display: grid !important; }
+      .empty-message { display: none !important; }
+      .hero { grid-template-columns: 160px minmax(0, 1fr); gap: 30px; }
+      .portrait-wrap { max-width: 160px; }
+      .publication { padding: 16px; }
+      .news { color: black; background: white; }
+      .button { transform: none; }
+    }
+
+    /* September 2026 refresh. */
+    .appointment { padding-left: 17px; border-left: 3px solid var(--accent); }
+    .news { margin: 23px 0; }
+    .portrait { aspect-ratio: 769 / 1000; object-fit: contain; }
+</style>
+<meta content="2026-09-27" name="website-converted-on"/><meta content="strict-origin-when-cross-origin" name="referrer"/></head>
+<body><!-- All text, styling, and search code are in this file. The current portrait is loaded from its public Google Sites image URL. To self-host it, save the photo as portrait.jpg beside index.html and change the portrait src to portrait.jpg. -->
+<a class="skip-link" href="#main">Skip to main content</a>
+<header class="site-header">
+<div class="container nav-wrap">
+<a aria-label="Yujie Xu home" class="brand" href="#top">
+<span aria-hidden="true" class="brand-mark">YX</span>
+<span>Yujie Xu</span>
+</a>
+<nav aria-label="Main navigation">
+<a href="#about">About</a>
+<a href="#research">Research</a>
+<a href="#undergraduate-work">Earlier work</a>
+<a href="#teaching">Teaching</a>
+</nav>
+</div>
+</header>
+<main id="main">
+<section class="container hero" id="top">
+<div class="portrait-wrap">
+<img alt="Portrait of Yujie Xu" class="portrait" decoding="async" fetchpriority="high" height="1000" loading="eager" referrerpolicy="no-referrer" src="https://sites.google.com/sitesv-images-rt/AMxu72tklfaJURhpvjkNQlrV8Ozr6bzZ0A4uzWWTtm-AL2UjBKi_hZ5vCWJfO0OIa9XhebUzGTgMERvHuWARFwOz1EcN2L5i3TQjrd-V6-Jt5aApflXor0TtqZmJiZTQHcDx-9F0UD2FsJh_cshZAbrJu3bwfGZO4TKk63FA-jWgln9Wje1eK29AfPXnA3-meaxmhxmiF6OZzEEaptQdM9YZgxNdu5T0bYqxwHZLllrSPJQ%3Dw1280" width="769"/>
+</div>
+<div class="hero-copy" id="about"><!-- BIOGRAPHY AND NEWS: refreshed from the Google Sites page on 2026-09-27. -->
+<p class="eyebrow">Columbia University · Mathematics</p>
+<h1>Yujie Xu, Prof. Dr.</h1>
+<p class="lead">I'm a mathematician currently based at Columbia University in New York City until December 2026. My research is partially funded by an NSF (U.S. National Science Foundation) award.</p>
+<p class="appointment">Starting January 2027, I will be a permanent professor (Independent Chair) at the University of Luxembourg in the EU country of Luxembourg.</p>
+<aside aria-label="News" class="news" id="news"><strong>News:</strong> I have postdoc and PhD positions available within my research group, with starting dates flexible in 2027; the postdoc application portal is now open, see the <a href="https://www.uni.lu/en/jobs/postdoctoral-researcher-in-number-theory-arithmetic-geometry/" rel="noopener noreferrer" target="_blank">job ad here</a> (or on MathJobs <a href="https://www.mathjobs.org/jobs/list/29032" rel="noopener noreferrer" target="_blank">here</a>). The PhD application portal will open later this semester.</aside>
+<p><strong>About me:</strong> I received my PhD in May 2022 from <a href="https://www.harvard.edu/" rel="noopener noreferrer" target="_blank">Harvard University</a> and was briefly at MIT (2022–2023) before moving to Columbia. Previously, I was an undergraduate student at Caltech (B.S. 2017) in sunny California. Most recently, I enjoyed two wonderful months at <a href="https://www.ihes.fr/" rel="noopener noreferrer" target="_blank">IHES</a> in a beautiful suburb of Paris.</p>
+<p>I can be reached at <a href="mailto:xu.yujie@columbia.edu">xu.yujie@columbia.edu</a> (until Dec 31st, 2026) or <a href="mailto:yujiexu@alumni.harvard.edu">yujiexu@alumni.harvard.edu</a> (permanently functioning); note that my <a href="https://math.harvard.edu/" rel="noopener noreferrer" target="_blank">math.harvard.edu</a> or <code>mit.edu</code> email addresses no longer work and incoming mails will not be forwarded (nor bounced back).</p>
+<div aria-label="Contact links" class="contact-actions">
+<a class="button" href="mailto:xu.yujie@columbia.edu">Email at Columbia</a>
+<a class="button secondary" href="mailto:yujiexu@alumni.harvard.edu">Harvard alumni email</a>
+</div>
+<p>I'm currently organizing the weekly <a href="https://columbiaafas.github.io/" rel="noopener noreferrer" target="_blank">Automorphic Forms and Arithmetic Seminar</a> at Columbia. I'm also co-organizing the <a href="https://www.math.columbia.edu/~goldfeld/JointNTS.html" rel="noopener noreferrer" target="_blank">joint Columbia-CUNY-NYU Number Theory Seminar</a>.</p>
+<p>I recently co-organized a thematic month <a href="https://conferences.cirm-math.fr/3498.html" rel="noopener noreferrer" target="_blank">“Around the Langlands Program”</a> at CIRM-Luminy, France, Jan–Feb 2026 (partially funded by my NSF grant).</p>
+</div>
+</section>
+<section class="section" id="research">
+<div class="container">
+<p class="eyebrow">Research</p>
+<h2>Publications and preprints</h2>
+<p class="section-intro">I'm interested in Number Theory (NT), Representation Theory (RT) and Arithmetic Geometry (AG). Some of my papers are listed below in reverse-chronological order by initial arXiv date, with math subject classifications in color.</p>
+<div aria-label="Subject legend" class="legend">
+<span class="tag tag-nt">NT</span><span>Number Theory</span>
+<span class="tag tag-rt">RT</span><span>Representation Theory</span>
+<span class="tag tag-ag">AG</span><span>Arithmetic Geometry</span>
+</div>
+<div aria-label="Publication filters" class="filter-panel" hidden="">
+<label class="search-label">
+<span>Search publications</span>
+<input class="search-input" id="publication-search" placeholder="Search by title, coauthor, journal, or topic…" type="search"/>
+</label>
+<div aria-label="Filter by subject" class="filter-buttons" role="group">
+<button aria-pressed="true" class="filter-button" data-filter="all" type="button">All</button>
+<button aria-pressed="false" class="filter-button" data-filter="nt" type="button">NT</button>
+<button aria-pressed="false" class="filter-button" data-filter="rt" type="button">RT</button>
+<button aria-pressed="false" class="filter-button" data-filter="ag" type="button">AG</button>
+</div>
+</div>
+<div class="publication-list" id="publication-list">
+<article class="publication" data-subjects="rt nt" id="paper-01"><!-- PUBLICATION 01: edit title, coauthors, links, and description below. -->
+<div>
+<h3 class="publication-title">
+<a href="https://arxiv.org/abs/2606.10149" rel="noopener noreferrer" target="_blank">
+                  A generic categorical local Langlands correspondence for quasi-split reductive groups
+                </a>
+</h3>
+<p class="publication-meta">With D. Helm and M. Solleveld · 2026</p>
+<div class="publication-tags"><span class="tag tag-rt">RT</span><span class="tag tag-nt">NT</span></div><p class="subject-description">Number Theory and Representation Theory</p>
+<div class="abstract"><p>We prove a generic categorical (arithmetic) local Langlands conjecture for a large class of quasi-split reductive <em>p</em>-adic groups <em>G</em>, including all quasi-split classical groups and some non-classical groups. More precisely, we construct a natural fully faithful functor from the stable infinity-category of generic Bernstein blocks on the automorphic side to the stable infinity-category of ind-coherent sheaves on the moduli stack of (arithmetic) <em>L</em>-parameters, generalizing earlier work of [BZCHN24] for GL<sub>n</sub>.</p><p>Moreover, for an arbitrary quasi-split reductive <em>p</em>-adic group <em>G</em>, we formulate a classical local Langlands framework under which a classical correspondence can be lifted to an infinity-categorical correspondence.</p><p>Furthermore, combined with the recent work of Hansen-Mann [HM26] and assuming the expected compatibility of Fargues-Scholze construction with spectral Eisenstein series, our results give the full Fargues–Scholze categorical local Langlands equivalence [FS24], without the genericity condition, for a large class of quasi-split reductive <em>p</em>-adic groups <em>G</em>.</p></div>
+<div class="resource-links"><a href="https://arxiv.org/abs/2606.10149" rel="noopener noreferrer" target="_blank">arXiv</a></div>
+</div>
+</article>
+<article class="publication" data-subjects="rt nt" id="paper-02"><!-- PUBLICATION 02: edit title, coauthors, links, and description below. -->
+<div>
+<h3 class="publication-title">
+<a href="https://dx.doi.org/10.4310/MRL.260614172949" rel="noopener noreferrer" target="_blank">
+                  On depth-zero characters of <em>p</em>-adic groups
+                </a>
+</h3>
+<p class="publication-meta">With M. Solleveld · 11 pages · 2025</p>
+<div class="publication-tags"><span class="tag tag-rt">RT</span><span class="tag tag-nt">NT</span></div><p class="subject-description">representation theory, with applications to number theory</p>
+<div class="journal">Mathematical Research Letters (2026)</div>
+<div class="abstract"><p>We show new properties of the Langlands correspondence for arbitrary tori over local fields. Furthermore, we give a detailed analysis of depth-zero characters of reductive <em>p</em>-adic groups, for groups that may be wildly ramified. We present several different definitions of “depth-zero” for characters, and show that these notions are in fact equivalent. These results are useful for proving new cases of local Langlands correspondences, in particular for depth zero representations.</p></div>
+<div class="resource-links"><a href="https://dx.doi.org/10.4310/MRL.260614172949" rel="noopener noreferrer" target="_blank">Journal</a><a href="https://arxiv.org/abs/2502.01505" rel="noopener noreferrer" target="_blank">arXiv</a></div>
+</div>
+</article>
+<article class="publication" data-subjects="rt nt" id="paper-03"><!-- PUBLICATION 03: edit title, coauthors, links, and description below. -->
+<div>
+<h3 class="publication-title">
+<a href="https://www.cambridge.org/core/journals/forum-of-mathematics-sigma/article/hecke-algebras-and-local-langlands-correspondence-for-nonsingular-depthzero-representations/205868B19FD2BCC68928E319EFE467B5" rel="noopener noreferrer" target="_blank">
+                  Hecke algebras and local Langlands correspondence for non-singular depth-zero representations
+                </a>
+</h3>
+<p class="publication-meta">With M. Solleveld · approximately 97 pages · 2024</p>
+<div class="publication-tags"><span class="tag tag-rt">RT</span><span class="tag tag-nt">NT</span></div><p class="subject-description">geometric representation theory, with applications to number theory</p>
+<div class="journal">Forum of Mathematics, Sigma (2026)</div>
+<div class="abstract"><p>Let <em>G</em> be a connected reductive group over a non-archimedean local field. We say that an irreducible depth-zero (complex) <em>G</em>-representation is non-singular if its cuspidal support is non-singular. We establish a Local Langlands Correspondence for all such representations.</p><p>We obtain it as a specialization from a categorical version: an equivalence between the category of finite-length non-singular depth-zero <em>G</em>-representations and the category of finite-length right modules of a direct sum of twisted affine Hecke algebras constructed from Langlands parameters. We also show that our LLC and our equivalence of categories have several nice properties, for example compatibility with parabolic induction.</p></div>
+<div class="resource-links">
+<a href="https://arxiv.org/abs/2411.19846" rel="noopener noreferrer" target="_blank">arXiv</a>
+<a href="https://www.cambridge.org/core/journals/forum-of-mathematics-sigma/article/hecke-algebras-and-local-langlands-correspondence-for-nonsingular-depthzero-representations/205868B19FD2BCC68928E319EFE467B5" rel="noopener noreferrer" target="_blank">Journal</a>
+</div>
+</div>
+</article>
+<article class="publication" data-subjects="ag nt" id="paper-04"><!-- PUBLICATION 04: edit title, coauthors, links, and description below. -->
+<div>
+<h3 class="publication-title">
+<a href="https://doi.org/10.1017/S0010437X26102978" rel="noopener noreferrer" target="_blank">
+                  Prismatic <em>F</em>-gauges and Fontaine–Laffaille modules
+                </a>
+</h3>
+<p class="publication-meta">With G. Terentiuk and V. Vologodsky · 2024</p>
+<div class="publication-tags"><span class="tag tag-ag">AG</span><span class="tag tag-nt">NT</span></div><p class="subject-description"><em>p</em>-adic Hodge theory, <em>p</em>-adic geometry</p>
+<div class="journal">Compositio Mathematica (2026)</div>
+<div class="abstract"><p>Let <em>k</em> be a perfect field of characteristic <em>p</em> and <em>W</em>(<em>k</em>) its ring of Witt vectors. We construct an equivalence of categories between the full subcategory of the derived category of quasi-coherent sheaves on the syntomification of <em>W</em>(<em>k</em>) spanned by objects whose Hodge-Tate weights are between [0, <em>p</em> − 2] and an appropriate derived category of Fontaine-Laffaille modules.</p></div>
+<div class="resource-links"><a href="https://doi.org/10.1017/S0010437X26102978" rel="noopener noreferrer" target="_blank">Journal</a>
+<a href="https://arxiv.org/abs/2402.17755" rel="noopener noreferrer" target="_blank">arXiv</a>
+<a href="https://www.cambridge.org/core/journals/compositio-mathematica/article/prismatic-fgauges-and-fontainelaffaille-modules/E6FCA3516FAC60270DDDB2ADEEAD8E70" rel="noopener noreferrer" target="_blank">Journal</a>
+</div>
+</div>
+</article>
+<article class="publication" data-subjects="ag nt" id="paper-05"><!-- PUBLICATION 05: edit title, coauthors, links, and description below. -->
+<div>
+<h3 class="publication-title">
+<a href="https://math.mit.edu/~yujiexu/Shtukas_unif.pdf" rel="noopener noreferrer" target="_blank">
+                  Uniformization for moduli stacks of global <em>G</em>-shtukas and the Langlands–Rapoport Conjecture
+                </a>
+</h3>
+<p class="publication-meta">With U. Hartl · 2023</p>
+<div class="publication-tags"><span class="tag tag-ag">AG</span><span class="tag tag-nt">NT</span></div><p class="subject-description"><em>p</em>-adic Hodge theory</p>
+<div class="abstract"><p>We show that the moduli spaces of bounded global <em>G</em>-Shtukas with colliding legs admit <em>p</em>-adic uniformization isomorphisms by Rapoport-Zink spaces. Moreover, we deduce the Langlands-Rapoport Conjecture over function fields in the case of colliding legs using our uniformization theorem.</p></div>
+<div class="resource-links"><a href="https://math.mit.edu/~yujiexu/Shtukas_unif.pdf" rel="noopener noreferrer" target="_blank">Original PDF</a><a href="https://arxiv.org/abs/2309.17441" rel="noopener noreferrer" target="_blank">arXiv</a></div>
+</div>
+</article>
+<article class="publication" data-subjects="rt nt" id="paper-06"><!-- PUBLICATION 06: edit title, coauthors, links, and description below. -->
+<div>
+<h3 class="publication-title">
+<a href="https://math.mit.edu/~yujiexu/LLC_GSp4.pdf" rel="noopener noreferrer" target="_blank">The explicit Local Langlands Correspondence for GSp(4), Sp(4) and stability (with an application to Modularity Lifting)</a>
+</h3>
+<p class="publication-meta">With K. Suzuki · 2023</p>
+<div class="publication-tags"><span class="tag tag-rt">RT</span><span class="tag tag-nt">NT</span></div><p class="subject-description">geometric representation theory, with applications to number theory</p>
+<p class="publication-note">(<a href="https://www.youtube.com/watch?v=XFN8PXz3PkM" rel="noopener noreferrer" target="_blank">Here</a> is a recording of a <a href="https://conferences.cirm-math.fr/2903.html" rel="noopener noreferrer" target="_blank">conference</a> talk related to this work.)</p><div class="abstract"><p>We give a purely local proof of the explicit Local Langlands Correspondence for GSp(4) and Sp(4). Moreover, we give a unique characterization in terms of stability of <em>L</em>-packets and other properties. Finally, in the appendix, we give an application of our explicit local Langlands correspondence to modularity lifting.</p></div>
+<div class="resource-links"><a href="https://math.mit.edu/~yujiexu/LLC_GSp4.pdf" rel="noopener noreferrer" target="_blank">Original PDF</a>
+<a href="https://arxiv.org/abs/2304.02622" rel="noopener noreferrer" target="_blank">arXiv</a>
+<a href="https://www.carmin.tv/en/video/hecke-algebras-for-p-adic-groups-the-explicit-local-langlands-correspondence-and-stability" rel="noopener noreferrer" target="_blank">Related talk</a>
+</div>
+</div>
+</article>
+<article class="publication" data-subjects="rt nt" id="paper-07"><!-- PUBLICATION 07: edit title, coauthors, links, and description below. -->
+<div>
+<h3 class="publication-title">
+<a href="https://math.mit.edu/~yujiexu/G2_stability.pdf" rel="noopener noreferrer" target="_blank">
+                  The explicit Local Langlands Correspondence for G<sub>2</sub> II: character formulas and stability
+                </a>
+</h3>
+<p class="publication-meta">With K. Suzuki · 2023</p>
+<div class="publication-tags"><span class="tag tag-rt">RT</span><span class="tag tag-nt">NT</span></div><p class="subject-description">geometric representation theory, with applications to number theory</p>
+<p class="publication-note">(<a href="https://www.youtube.com/watch?v=XFN8PXz3PkM" rel="noopener noreferrer" target="_blank">Here</a> is a recording of a <a href="https://conferences.cirm-math.fr/2903.html" rel="noopener noreferrer" target="_blank">conference</a> talk related to this work.)</p><div class="abstract"><p>We write down character formulas for representations of <em>G</em><sub>2</sub> considered in <a href="https://math.mit.edu/~yujiexu/LLC_G2.pdf" rel="noopener noreferrer" target="_blank">[LLC-G2]</a>, and show that stability for <em>L</em>-packets uniquely pins down the Local Langlands Correspondence constructed in <a href="https://math.mit.edu/~yujiexu/LLC_G2.pdf" rel="noopener noreferrer" target="_blank">[LLC-G2]</a>, thus proving unique characterization of the LLC in <a href="https://math.mit.edu/~yujiexu/LLC_G2.pdf" rel="noopener noreferrer" target="_blank">loc.cit</a>.</p></div>
+<div class="resource-links"><a href="https://math.mit.edu/~yujiexu/G2_stability.pdf" rel="noopener noreferrer" target="_blank">Original PDF</a>
+<a href="https://arxiv.org/abs/2304.02630" rel="noopener noreferrer" target="_blank">arXiv</a>
+<a href="https://www.carmin.tv/en/video/hecke-algebras-for-p-adic-groups-the-explicit-local-langlands-correspondence-and-stability" rel="noopener noreferrer" target="_blank">Related talk</a>
+</div>
+</div>
+</article>
+<article class="publication" data-subjects="rt nt" id="paper-08"><!-- PUBLICATION 08: edit title, coauthors, links, and description below. -->
+<div>
+<h3 class="publication-title">
+<a href="https://www.math.columbia.edu/~yujiexu/geometrization-of-the-satake-transform-for-mod-p-hecke-algebras" rel="noopener noreferrer" target="_blank">
+                  Geometrization of the Satake transform for mod <em>p</em> Hecke algebras
+                </a>
+</h3>
+<p class="publication-meta">With R. Cass</p>
+<div class="publication-tags"><span class="tag tag-rt">RT</span><span class="tag tag-nt">NT</span></div><p class="subject-description">geometric representation theory, with applications to number theory</p>
+<div class="journal">Forum of Mathematics, Sigma (2025)</div>
+<div class="abstract"><p>We geometrize the mod <em>p</em> Satake isomorphism of Herzig and Henniart–Vignéras using Witt vector affine flag varieties for reductive groups in mixed characteristic. We deduce this as a special case of a formula, stated in terms of the geometry of generalized Mirkovic–Vilonen cycles, for the Satake transform of an arbitrary parahoric mod <em>p</em> Hecke algebra with respect to an arbitrary Levi subgroup. Moreover, we prove an explicit formula for the convolution product in an arbitrary parahoric mod <em>p</em> Hecke algebra.</p><p>Our methods involve the constant term functors inspired from the geometric Langlands program, and we also treat the case of reductive groups in equal characteristic.</p></div>
+<div class="resource-links"><a href="https://www.math.columbia.edu/~yujiexu/geometrization-of-the-satake-transform-for-mod-p-hecke-algebras" rel="noopener noreferrer" target="_blank">Paper PDF</a></div>
+</div>
+</article>
+<article class="publication" data-subjects="rt nt" id="paper-09"><!-- PUBLICATION 09: edit title, coauthors, links, and description below. -->
+<div>
+<h3 class="publication-title">
+<a href="https://math.mit.edu/~yujiexu/LLC_G2.pdf" rel="noopener noreferrer" target="_blank">
+                  The Explicit Local Langlands Correspondence for G<sub>2</sub>
+</a>
+</h3>
+<p class="publication-meta">With A.-M. Aubert · 2022</p>
+<div class="publication-tags"><span class="tag tag-rt">RT</span><span class="tag tag-nt">NT</span></div><p class="subject-description">geometric representation theory, with applications to number theory</p>
+<p class="publication-note">(<a href="https://www.youtube.com/watch?v=XFN8PXz3PkM" rel="noopener noreferrer" target="_blank">Here</a> is a recording of a <a href="https://conferences.cirm-math.fr/2903.html" rel="noopener noreferrer" target="_blank">conference</a> talk related to this work.)</p><div class="abstract"><p>We develop a general strategy for constructing explicit Local Langlands Correspondences for <em>p</em>-adic reductive groups via reduction to LLC for supercuspidal representations of proper Levi subgroups, using Hecke algebra techniques. As an example of our general strategy, we construct explicit Local Langlands Correspondence for the exceptional group <em>G</em><sub>2</sub> over a nonarchimedean local field, with explicit <em>L</em>-packets and explicit matching between the group and Galois sides.</p><p>We also give a list of characterizing properties for our LLC. For intermediate series, we build on <a href="https://math.mit.edu/~yujiexu/AX_Hecke_algebras.pdf" rel="noopener noreferrer" target="_blank">our previous results on Hecke algebras</a>.</p><p>Moreover, we show the existence of non-unipotent singular supercuspidal representations of <em>G</em><sub>2</sub>, and exhibit them in mixed <em>L</em>-packets mixing supercuspidal representations with non-supercuspidal ones. Furthermore, our LLC satisfies a list of expected properties, including the compatibility with cuspidal support.</p></div>
+<div class="resource-links"><a href="https://math.mit.edu/~yujiexu/LLC_G2.pdf" rel="noopener noreferrer" target="_blank">Original PDF</a>
+<a href="https://arxiv.org/abs/2208.12391" rel="noopener noreferrer" target="_blank">arXiv</a>
+<a href="https://www.carmin.tv/en/video/hecke-algebras-for-p-adic-groups-the-explicit-local-langlands-correspondence-and-stability" rel="noopener noreferrer" target="_blank">Related talk</a>
+</div>
+</div>
+</article>
+<article class="publication" data-subjects="ag nt rt" id="paper-10"><!-- PUBLICATION 10: edit title, coauthors, links, and description below. -->
+<div>
+<h3 class="publication-title">
+<a href="https://link.springer.com/article/10.1007/s00222-025-01386-1" rel="noopener noreferrer" target="_blank">
+                  The connected components of affine Deligne–Lusztig varieties
+                </a>
+</h3>
+<p class="publication-meta">With I. Gleason and D. Lim · 2022</p>
+<div class="publication-tags"><span class="tag tag-ag">AG</span><span class="tag tag-nt">NT</span><span class="tag tag-rt">RT</span></div><p class="subject-description"><em>p</em>-adic Hodge theory, <em>p</em>-adic geometry, with applications to representation theory</p>
+<div class="journal">Inventiones Mathematicae (2026)</div>
+<div class="abstract"><p>We compute the connected components of arbitrary parahoric level affine Deligne–Lusztig varieties and local Shimura varieties, thus resolving the conjecture raised in <a href="https://www.worldscientific.com/doi/10.1142/9789813272880_0100" rel="noopener noreferrer" target="_blank">[He]</a> in full generality (even for non-quasisplit groups). We achieve this by relating them to the connected components of infinite level moduli spaces of <em>p</em>-adic shtukas, where we use <em>v</em>-sheaf-theoretic techniques such as the specialization map of kimberlites.</p><p>Along the way, we give a <em>p</em>-adic Hodge-theoretic characterization of HN-irreducibility. As applications, we obtain many results on the geometry of integral models of Shimura varieties at arbitrary parahoric levels. In particular, we deduce new CM lifting results on integral models of Shimura varieties for quasi-split groups at arbitrary connected parahoric levels (which were used to strengthen some results in <a href="https://math.mit.edu/~yujiexu/normalization_abelian_type_YujieXu.pdf" rel="noopener noreferrer" target="_blank">my integral model paper</a>).</p></div>
+<div class="resource-links"><a href="https://link.springer.com/article/10.1007/s00222-025-01386-1" rel="noopener noreferrer" target="_blank">Journal</a></div>
+</div>
+</article>
+<article class="publication" data-subjects="rt nt" id="paper-11"><!-- PUBLICATION 11: edit title, coauthors, links, and description below. -->
+<div>
+<h3 class="publication-title">
+<a href="https://www.math.columbia.edu/~yujiexu/Hecke-algebras-journal-version" rel="noopener noreferrer" target="_blank">
+                  Hecke algebras for <em>p</em>-adic reductive groups and Local Langlands Correspondence for Bernstein blocks
+                </a>
+</h3>
+<p class="publication-meta">With A.-M. Aubert</p>
+<div class="publication-tags"><span class="tag tag-rt">RT</span><span class="tag tag-nt">NT</span></div><p class="subject-description">geometric representation theory</p>
+<div class="journal">Advances in Mathematics (2024)</div>
+<p class="publication-note">(<a href="https://www.youtube.com/watch?v=XFN8PXz3PkM" rel="noopener noreferrer" target="_blank">Here</a> is a recording of a <a href="https://conferences.cirm-math.fr/2903.html" rel="noopener noreferrer" target="_blank">conference</a> talk related to this work.)</p><div class="abstract"><p>We construct local Langlands correspondences for Bernstein blocks for arbitrary reductive groups using Hecke algebra techniques. Some results from §4 are used by the same authors to construct a full local Langlands correspondence in <a href="https://math.mit.edu/~yujiexu/LLC_G2.pdf" rel="noopener noreferrer" target="_blank">[LLC-G2]</a>. Moreover, we also prove a reduction to depth zero result for the Bernstein components attached to regular supercuspidal representations of Levi subgroups.</p></div>
+<div class="resource-links">
+<a href="https://arxiv.org/abs/2202.01305" rel="noopener noreferrer" target="_blank">arXiv</a>
+<a href="https://www.math.columbia.edu/~yujiexu/Hecke-algebras-journal-version" rel="noopener noreferrer" target="_blank">Paper PDF</a>
+<a href="https://www.carmin.tv/en/video/hecke-algebras-for-p-adic-groups-the-explicit-local-langlands-correspondence-and-stability" rel="noopener noreferrer" target="_blank">Talk</a>
+</div>
+</div>
+</article>
+<article class="publication" data-subjects="ag nt" id="paper-12"><!-- PUBLICATION 12: edit title, coauthors, links, and description below. -->
+<div>
+<h3 class="publication-title">
+<a href="https://www.math.columbia.edu/~yujiexu/modularity-of-arithmetic-special-divisors-for-unitary-shimura-varieties-journal-version" rel="noopener noreferrer" target="_blank">A comparison of the “closure” model with Rapoport-Smithling-Zhang model</a>
+</h3><p class="publication-meta">2022</p>
+<div class="publication-tags"><span class="tag tag-ag">AG</span><span class="tag tag-nt">NT</span></div><p class="subject-description"><em>p</em>-adic Hodge theory</p>
+<div class="journal">Forum of Mathematics, Sigma (2025)</div>
+<div class="abstract"><p>We prove that Kisin-Pappas integral models for Shimura varieties agree with Rapoport-Smithling-Zhang's exotic construction, using methods inspired from <a href="https://arxiv.org/pdf/2111.04209.pdf" rel="noopener noreferrer" target="_blank">my PEL paper</a> and <a href="https://math.mit.edu/~yujiexu/normalization_abelian_type_YujieXu.pdf" rel="noopener noreferrer" target="_blank">my normalization paper</a>. This is included as an appendix to C. Qiu's “Modularity of arithmetic special divisors for unitary Shimura varieties” and serves as a technical ingredient for the proof of the main results.</p></div>
+<div class="resource-links"><a href="https://www.math.columbia.edu/~yujiexu/modularity-of-arithmetic-special-divisors-for-unitary-shimura-varieties-journal-version" rel="noopener noreferrer" target="_blank">Paper PDF</a></div>
+</div>
+</article>
+<article class="publication" data-subjects="ag nt" id="paper-13"><!-- PUBLICATION 13: edit title, coauthors, links, and description below. -->
+<div>
+<h3 class="publication-title">
+<a href="https://arxiv.org/abs/2110.04287" rel="noopener noreferrer" target="_blank">
+                  Finiteness of fppf cohomology
+                </a>
+</h3><p class="publication-meta">2021</p>
+<div class="publication-tags"><span class="tag tag-ag">AG</span><span class="tag tag-nt">NT</span></div><p class="subject-description"><em>p</em>-adic Hodge theory, algebraic geometry</p>
+<div class="abstract"><p>We show that <span class="math">H<sup>1</sup><sub>fppf</sub>(Spec <em>R</em>, <em>G</em>)</span> is finite, for <em>R</em> a Henselian DVR with finite residue field and <em>G</em> a finite type, flat <em>R</em>-group scheme (not necessarily commutative) with smooth generic fiber. We then give an application of the global analogue of this finiteness result to PEL type integral models of Shimura varieties.</p></div>
+<div class="resource-links"><a href="https://arxiv.org/abs/2110.04287" rel="noopener noreferrer" target="_blank">arXiv</a></div>
+</div>
+</article>
+<article class="publication" data-subjects="ag nt" id="paper-14"><!-- PUBLICATION 14: edit title, coauthors, links, and description below. -->
+<div>
+<h3 class="publication-title">
+<a href="https://rdcu.be/dQAuZ" rel="noopener noreferrer" target="_blank">On the Hodge embedding for PEL type integral models of Shimura varieties</a>
+</h3><p class="publication-meta">2021</p>
+<div class="publication-tags"><span class="tag tag-ag">AG</span><span class="tag tag-nt">NT</span></div><p class="subject-description"><em>p</em>-adic Hodge theory</p>
+<div class="journal">Bollettino dell’Unione Matematica Italiana (2024)</div>
+<div class="abstract"><p>We give a simple proof that Kottwitz’s PEL type integral models of Shimura varieties admit closed embeddings into Siegel integral models. We also show that Rapoport’s and Kottwitz’s integral models agree with Kisin’s integral models for relevant Shimura data.</p></div>
+<div class="resource-links"><a href="https://rdcu.be/dQAuZ" rel="noopener noreferrer" target="_blank">Journal</a><a href="https://arxiv.org/abs/2111.04209" rel="noopener noreferrer" target="_blank">arXiv</a></div>
+</div>
+</article>
+<article class="publication" data-subjects="ag nt" id="paper-15"><!-- PUBLICATION 15: edit title, coauthors, links, and description below. -->
+<div>
+<h3 class="publication-title">
+<a href="https://link.springer.com/article/10.1007/s00208-026-03338-3" rel="noopener noreferrer" target="_blank">
+                  Normalization in the integral models of Shimura varieties of abelian type
+                </a>
+</h3><p class="publication-meta">2021</p>
+<div class="publication-tags"><span class="tag tag-ag">AG</span><span class="tag tag-nt">NT</span></div><p class="subject-description"><em>p</em>-adic Hodge theory, algebraic geometry</p>
+<div class="journal">Mathematische Annalen (2026)</div>
+<p class="publication-note">(<a href="https://www.youtube.com/watch?v=WRFxNjtOPmg" rel="noopener noreferrer" target="_blank">Here</a> is a recording of a talk related to an earlier version of this work. The final version of the main theorem has been more recently strengthened using my joint paper <a href="https://link.springer.com/article/10.1007/s00222-025-01386-1" rel="noopener noreferrer" target="_blank">[ADLV]</a>.)</p><div class="abstract"><p>We show that the normalization step in the construction of integral models for abelian type Shimura varieties is redundant, and that the flat closure model is already smooth at hyperspecial level (resp. normal at parahoric level). As a consequence, we show that there exist closed embeddings of toroidal compactifications of integral models of Hodge type into toroidal compactifications of Siegel integral models, for suitable choices of cone decompositions.</p></div>
+<div class="resource-links">
+<a href="https://link.springer.com/article/10.1007/s00208-026-03338-3" rel="noopener noreferrer" target="_blank">Journal</a>
+<a href="https://www.youtube.com/watch?v=WRFxNjtOPmg" rel="noopener noreferrer" target="_blank">Earlier-version talk</a>
+</div>
+</div>
+</article>
+<article class="publication" data-subjects="ag nt" id="paper-16"><!-- PUBLICATION 16: edit title, coauthors, links, and description below. -->
+<div>
+<h3 class="publication-title">
+<a href="https://www.math.columbia.edu/~yujiexu/bounding-selmer-groups-for-the-rankin-selberg-convolution-of-coleman-families" rel="noopener noreferrer" target="_blank">
+                  Bounding Selmer groups for the Rankin–Selberg convolution of Coleman families
+                </a>
+</h3>
+<p class="publication-meta">With A. Graham and D. Gulotta · 2019</p>
+<div class="publication-tags"><span class="tag tag-ag">AG</span><span class="tag tag-nt">NT</span></div><p class="subject-description">number theory</p>
+<div class="journal">Canadian Journal of Mathematics (2020)</div>
+<div class="abstract"><p>For two cuspidal modular forms <em>f</em> and <em>g</em>, consider a Coleman family passing through <em>f</em>. For an open affinoid subdomain <em>V</em> of weight space <em>W</em>, we construct a coherent sheaf over <em>V</em> × <em>W</em> which interpolates the Bloch-Kato Selmer group of the Rankin-Selberg convolution of two modular forms in the critical range (i.e. the range where the <em>p</em>-adic <em>L</em>-function <em>L</em><sub>p</sub> interpolates critical values of the global <em>L</em>-function). We show that the support of this sheaf is contained in the vanishing locus of <em>L</em><sub>p</sub>.</p></div>
+<div class="resource-links"><a href="https://www.math.columbia.edu/~yujiexu/bounding-selmer-groups-for-the-rankin-selberg-convolution-of-coleman-families" rel="noopener noreferrer" target="_blank">Paper PDF</a></div>
+</div>
+</article>
+<article class="publication" data-subjects="ag nt" id="paper-17"><!-- PUBLICATION 17: edit title, coauthors, links, and description below. -->
+<div>
+<h3 class="publication-title">
+<a href="https://www.math.columbia.edu/~yujiexu/surj-rat" rel="noopener noreferrer" target="_blank">
+                  Surjectivity of Galois representations in rational families of abelian varieties
+                </a>
+</h3>
+<p class="publication-meta">With A. Landesman, A. Swaminathan, and J. Tao</p>
+<div class="publication-tags"><span class="tag tag-ag">AG</span><span class="tag tag-nt">NT</span></div><p class="subject-description">arithmetic geometry</p>
+<div class="journal">Algebra &amp; Number Theory (2019)</div>
+<div class="abstract"><p>We show that for any non-isotrivial family of abelian varieties over a rational base with big monodromy, those members that have adelic Galois representation with image as large as possible form a density-one subset. Our results can be applied to a number of interesting families of abelian varieties, such as rational families dominating the moduli of Jacobians of hyperelliptic curves, trigonal curves, or plane curves.</p><p>As a consequence, we prove that for any dimension <em>g</em> greater than or equal to three, there are infinitely many abelian varieties over ℚ with adelic Galois representation having image equal to all of GSp<sub>2<em>g</em></sub>(ℤ̂).</p></div>
+<div class="resource-links"><a href="https://www.math.columbia.edu/~yujiexu/surj-rat" rel="noopener noreferrer" target="_blank">Paper PDF</a></div>
+</div>
+</article>
+</div>
+<p class="empty-message" id="empty-message" role="status">No publications match the selected filter and search term.</p>
+</div>
+</section>
+<section class="section" id="undergraduate-work">
+<div class="container">
+<p class="eyebrow">Earlier work</p>
+<h2>Undergraduate papers</h2>
+<p class="section-intro">Some old REU/SURF (undergraduate) papers. REU = “Research Experience for Undergraduates” in the U.S., and SURF = “Summer Undergraduate Research Fellowships” at Caltech.</p>
+<ul class="compact-list">
+<li class="compact-item">
+<h3><a href="https://math.mit.edu/~yujiexu/lifting_subgroups_REU.pdf" rel="noopener noreferrer" target="_blank">Lifting subgroups of symplectic groups over ℤ/ℓℤ</a></h3>
+<p>With A. Landesman, A. Swaminathan, and J. Tao · 2017 · <span class="tag tag-ag">AG</span> <span class="tag tag-nt">NT</span></p>
+<div class="resource-links"><a href="https://math.mit.edu/~yujiexu/lifting_subgroups_REU.pdf" rel="noopener noreferrer" target="_blank">Original PDF</a><a href="https://arxiv.org/abs/1607.04698" rel="noopener noreferrer" target="_blank">arXiv</a></div><p class="subject-description">arithmetic geometry</p></li>
+<li class="compact-item">
+<h3><a href="https://math.mit.edu/~yujiexu/hyperelliptic_REU.pdf" rel="noopener noreferrer" target="_blank">Hyperelliptic curves with maximal Galois action on the torsion points of their Jacobians</a></h3>
+<p>With A. Landesman, A. Swaminathan, and J. Tao · 2017 · <span class="tag tag-ag">AG</span> <span class="tag tag-nt">NT</span></p>
+<div class="resource-links"><a href="https://math.mit.edu/~yujiexu/hyperelliptic_REU.pdf" rel="noopener noreferrer" target="_blank">Original PDF</a><a href="https://arxiv.org/abs/1705.08777" rel="noopener noreferrer" target="_blank">arXiv</a></div><p class="subject-description">arithmetic geometry</p></li>
+<li class="compact-item">
+<h3><a href="https://www.math.columbia.edu/~yujiexu/QSM-journal" rel="noopener noreferrer" target="_blank">Quantum statistical mechanics in Arithmetic Topology</a></h3>
+<p>With M. Marcolli · 2017 · <em>Journal of Geometry and Physics</em> · <span class="tag tag-other">Topology / Physics</span></p>
+<p class="subject-description">Algebraic topology, Mathematical Physics</p></li>
+</ul>
+</div>
+</section>
+<section class="section" id="teaching">
+<div class="container">
+<p class="eyebrow">Teaching</p>
+<h2>Courses and recognition</h2>
+<div class="teaching-grid">
+<article class="teaching-card">
+<h3>Math 21b: Linear Algebra and Differential Equations</h3>
+<p>Instructor/Lecturer, Harvard University. Awarded a Bok Center <a href="https://bokcenter.harvard.edu/files/shadowbok/files/certificate_of_distinction_in_teaching_spring_2019_names.pdf" rel="noopener noreferrer" target="_blank">Certificate of Distinction and Excellence in Teaching</a>.</p>
+<p><a href="https://math.mit.edu/~yujiexu/Math-21b-student-evaluation.pdf" rel="noopener noreferrer" target="_blank">Here</a> you can find excerpts of some extremely positive student comments from the freshman linear algebra class I taught at Harvard.</p>
+</article>
+<article class="teaching-card">
+<h3>Math 221: Commutative Algebra</h3>
+<p>Teaching Fellow, Fall 2019, Harvard University. Awarded a Bok Center <a href="https://bokcenter.harvard.edu/files/shadowbok/files/cert_of_dist_by_name.pdf" rel="noopener noreferrer" target="_blank">Certificate of Distinction and Excellence in Teaching</a>.</p>
+</article>
+<article class="teaching-card">
+<h3>Math 137: Algebraic Geometry</h3>
+<p>Teaching Fellow, Spring 2020, Harvard University. Due to the pandemic, this course switched to Zoom instruction halfway, and there was no quantitative student evaluation nor Bok Center Teaching Award given out.</p>
+</article>
+<article class="teaching-card">
+<h3>Math 122: Algebra I: Theory of Groups and Vector Spaces</h3>
+<p>Teaching Fellow, Fall 2020 (Zoom instruction), Harvard University. Awarded a Bok Center <a href="https://bokcenter.harvard.edu/files/fall_2020_distinction_by_name.pdf" rel="noopener noreferrer" target="_blank">Certificate of Distinction and Excellence in Teaching</a>.</p>
+</article>
+<article class="teaching-card">
+<h3>Elliptic Curves and Beyond</h3>
+<p>Summer Tutorial 2019, Harvard University.</p>
+</article>
+</div>
+</div>
+</section>
+</main>
+<footer>
+<div class="container footer-inner"><span>Last updated: <time datetime="2026-09-18">September 18, 2026</time></span>
+<span><a href="https://sites.google.com/view/yujie-xu" rel="noopener noreferrer" target="_blank">Original Google Site</a> · <a href="#top">Back to top</a></span></div>
+</footer>
+<a aria-label="Back to top" class="back-to-top" href="#top" id="back-to-top">↑</a>
+<script>
+    (() => {
+      'use strict';
+      const search = document.getElementById('publication-search');
+      const panel = document.querySelector('.filter-panel');
+      const buttons = Array.from(document.querySelectorAll('.filter-button'));
+      const publications = Array.from(document.querySelectorAll('.publication'));
+      const empty = document.getElementById('empty-message');
+      const backToTop = document.getElementById('back-to-top');
+      let activeFilter = 'all';
+      const normalize = value => value.toLocaleLowerCase().normalize('NFKD').replace(/[\u0300-\u036f]/g, '');
+      const entries = publications.map(element => ({
+        element,
+        subjects: element.dataset.subjects.split(/\s+/),
+        text: normalize(element.textContent)
+      }));
+      function applyFilters() {
+        const terms = normalize(search.value.trim()).split(/\s+/).filter(Boolean);
+        let visible = 0;
+        entries.forEach(({ element, subjects, text }) => {
+          const show = (activeFilter === 'all' || subjects.includes(activeFilter)) && terms.every(term => text.includes(term));
+          element.hidden = !show;
+          if (show) visible++;
+        });
+        empty.classList.toggle('is-visible', visible === 0);
+      }
+      buttons.forEach(button => button.addEventListener('click', () => {
+        activeFilter = button.dataset.filter;
+        buttons.forEach(other => other.setAttribute('aria-pressed', String(other === button)));
+        applyFilters();
+      }));
+      search.addEventListener('input', applyFilters);
+      search.addEventListener('keydown', event => {
+        if (event.key === 'Escape') { search.value = ''; applyFilters(); }
+      });
+      function updateBackToTop() {
+        const visible = window.scrollY > 700;
+        backToTop.classList.toggle('visible', visible);
+        backToTop.tabIndex = visible ? 0 : -1;
+        backToTop.setAttribute('aria-hidden', String(!visible));
+      }
+      window.addEventListener('scroll', updateBackToTop, { passive: true });
+      panel.hidden = false;
+      applyFilters();
+      updateBackToTop();
+    })();
+</script>
+</body>
+</html>
