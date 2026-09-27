@@ -799,6 +799,28 @@
     /* Smaller type for the Teaching section only. */
     #teaching { font-size: 0.975rem; }
     #teaching h2 { font-size: 1.5rem; }
+
+    /* Keep the visitor map a discreet thumbnail. Auto-width uses this container. */
+    #visitor-map-thumbnail {
+      width: 120px;
+      max-width: calc(100% - 26px);
+      margin: 0 auto 24px;
+    }
+    #visitor-map-thumbnail > div,
+    #visitor-map-thumbnail a {
+      max-width: 100% !important;
+    }
+    #visitor-map-thumbnail img,
+    #visitor-map-thumbnail canvas,
+    #visitor-map-thumbnail svg {
+      display: block;
+      max-width: 100% !important;
+      height: auto !important;
+    }
+    #visitor-map-thumbnail iframe {
+      max-width: 100% !important;
+      border: 0;
+    }
 </style>
 <meta content="2026-09-27" name="website-converted-on"/><meta content="strict-origin-when-cross-origin" name="referrer"/></head>
 <body>
@@ -1084,6 +1106,8 @@
       updateBackToTop();
     })();
 </script>
+<div id="visitor-map-thumbnail" role="region" aria-label="Visitor map">
 <script type="text/javascript" id="mapmyvisitors" src="//mapmyvisitors.com/map.js?d=ZnNAGG30yIr3ziDBPq-KiTxDhDh2KWT1H-q4klVwpnQ&cl=ffffff&w=a"></script>
+</div>
 </body>
 </html>
