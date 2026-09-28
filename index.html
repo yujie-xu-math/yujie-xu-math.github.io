@@ -2,6 +2,15 @@
 
 <html lang="en">
 <head><!-- GitHub Pages copy of https://sites.google.com/view/yujie-xu. Original wording and headings restored 2026-09-27. Photo is loaded from yujie_xu_portrait.jpg beside this file. -->
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z7Q0TVX9JX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Z7Q0TVX9JX');
+</script>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta content="Academic website of Yujie Xu: research, publications, teaching, and contact information." name="description"/>
@@ -800,26 +809,38 @@
     #teaching { font-size: 0.975rem; }
     #teaching h2 { font-size: 1.5rem; }
 
-    /* Keep the visitor map a discreet thumbnail. Auto-width uses this container. */
+    /* Tiny visitor map: scale the entire generated widget, not only an image.
+       The fixed outer viewport also contains oversized or positioned children. */
     #visitor-map-thumbnail {
-      width: 120px;
-      max-width: calc(100% - 26px);
-      margin: 0 auto 24px;
-    }
-    #visitor-map-thumbnail > div,
-    #visitor-map-thumbnail a {
-      max-width: 100% !important;
-    }
-    #visitor-map-thumbnail img,
-    #visitor-map-thumbnail canvas,
-    #visitor-map-thumbnail svg {
+      position: relative;
       display: block;
-      max-width: 100% !important;
-      height: auto !important;
-    }
-    #visitor-map-thumbnail iframe {
-      max-width: 100% !important;
+      box-sizing: border-box;
+      width: 64px !important;
+      min-width: 64px !important;
+      max-width: 64px !important;
+      height: 48px !important;
+      min-height: 48px !important;
+      max-height: 48px !important;
+      margin: 0 0 20px;
+      padding: 0 !important;
       border: 0;
+      overflow: hidden !important;
+      contain: layout paint;
+      isolation: isolate;
+    }
+    #visitor-map-stage {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 320px !important;
+      min-width: 320px !important;
+      max-width: none !important;
+      height: auto;
+      margin: 0 !important;
+      padding: 0 !important;
+      border: 0;
+      transform: scale(0.2);
+      transform-origin: top left;
     }
 </style>
 <meta content="2026-09-27" name="website-converted-on"/><meta content="strict-origin-when-cross-origin" name="referrer"/></head>
@@ -1106,8 +1127,66 @@
       updateBackToTop();
     })();
 </script>
+<div class="container">
 <div id="visitor-map-thumbnail" role="region" aria-label="Visitor map">
-<script type="text/javascript" id="mapmyvisitors" src="//mapmyvisitors.com/map.js?d=ZnNAGG30yIr3ziDBPq-KiTxDhDh2KWT1H-q4klVwpnQ&cl=ffffff&w=a"></script>
+<div id="visitor-map-stage">
+<script type="text/javascript" id="mapmyvisitors" src="https://mapmyvisitors.com/map.js?d=ZnNAGG30yIr3ziDBPq-KiTxDhDh2KWT1H-q4klVwpnQ&amp;cl=ffffff&amp;w=a"></script>
 </div>
+</div>
+</div>
+<script>
+  (() => {
+    'use strict';
+    const thumbnail = document.getElementById('visitor-map-thumbnail');
+    const stage = document.getElementById('visitor-map-stage');
+    if (!thumbnail || !stage) return;
+    let scheduled = false;
+
+    // Use unscaled layout dimensions so maps, canvases, dots, and labels all
+    // shrink together, including widgets with inline widths or minimum sizes.
+    function fitVisitorMap() {
+      scheduled = false;
+      const width = Math.max(stage.scrollWidth, stage.offsetWidth, 1);
+      const height = Math.max(stage.scrollHeight, stage.offsetHeight, 1);
+      const scale = Math.min(thumbnail.clientWidth / width,
+                             thumbnail.clientHeight / height, 1);
+      stage.style.transform = `scale(${scale})`;
+      stage.style.left = `${(thumbnail.clientWidth - width * scale) / 2}px`;
+      stage.style.top = `${(thumbnail.clientHeight - height * scale) / 2}px`;
+    }
+
+    function scheduleFit() {
+      if (scheduled) return;
+      scheduled = true;
+      requestAnimationFrame(fitVisitorMap);
+    }
+
+    const sizeObserver = typeof ResizeObserver === 'function'
+      ? new ResizeObserver(scheduleFit) : null;
+    function watchWidgetSizes() {
+      if (!sizeObserver) return;
+      sizeObserver.observe(stage);
+      stage.querySelectorAll('div, a, img, canvas, svg, iframe').forEach(
+        element => sizeObserver.observe(element)
+      );
+    }
+
+    // The visitor service can insert or resize its content after page load.
+    const contentObserver = new MutationObserver(records => {
+      if (!records.some(record => record.target !== stage ||
+                        record.type === 'childList')) return;
+      watchWidgetSizes();
+      scheduleFit();
+    });
+    contentObserver.observe(stage, {
+      childList: true, subtree: true, attributes: true,
+      attributeFilter: ['style', 'width', 'height', 'class']
+    });
+    stage.addEventListener('load', scheduleFit, true);
+    window.addEventListener('resize', scheduleFit, { passive: true });
+    watchWidgetSizes();
+    scheduleFit();
+  })();
+</script>
 </body>
 </html>
